@@ -28,3 +28,23 @@ php artisan vendor:publish --tag=jetstream-views
 ```
 
 ### 6. You Can Now Launch the Project
+
+## Project Build
+### 1. Make Migrations
+#### create table
+To create a new migration for a table, use the following command:
+```shell
+php artisan make:migration create_examples_table --create="examples"
+```
+
+#### edit table 
+To create a migration for modifying an existing table, use:
+```shell
+php artisan make:migration add_feature_field_to_example_table --table="examples"
+```
+
+#### run migration
+To apply the migrations and update the database schema, execute:
+```shell
+php artisan migrate
+```
